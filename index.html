@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Гиперссылки и форма</title>
+  </head>
+  <body>
+    <ul>
+      <li><a href="#Ssilki" title="Нумерованные ссылки">Нумерованные ссылки</a></li>
+      <li><a href="#Forma" title="Форма">Форма</a></li>
+    </ul>
+    <h2>Гиперссылки</h2>
+    <ol id="Ssilki">
+      <li><a href="example.com">Aбсолютная гиперссылка</a></li>
+      <li><a href="https://example.com">Aбсолютная в протоколе</a></li>
+      <li><a href="ftp://example.com/file.txt">Cсылка на файл на сервере FTP без авторизации</a></li>
+      <li><a href="ftp://gul:parol1488@example.com/file.txt">Cсылка на файл на сервере FTP с авторизацией</a></li>
+      <li><a href="https://ru.wikipedia.org/wiki/FTP?#footer-info-copyright">Ссылка на фрагмент страницы некоторого сайта</a></li>
+      <li><a href="zxc.html#bot">Ссылка на фрагмент текущей страницы</a></li>
+      <li><a href="https://example.com/URL?a&b">Ссылка с двумя параметрами в URL</a></li>
+      <li><a href="#one" title="Первая ссылка">Первая с title </a><a href="#two" title="Вторая ссылка">Вторая с title </a> <a href="#three" title="Третья ссылка">Третья с title</a></li>
+      <li><a>Ссылка без href</a></li>
+      <li><a href="">Ссылка с пустым href</a></li>
+      <li><a href="https://example.com" rel="nofollow">Ссылка, по которой запрещен переход поисковикам</a></li>
+      <!--noindex--><li><a href="https://example.com">Ссылка, запрещенная для индексации поисковиками</a></li><!--/noindex-->
+      <li><p>Я даже не знаю, что сюда написать<a href="https://example.com">Ссылка контекстная в тексте абзаца</a>И сюда тоже не знаю что писать</p></li>
+      <li><a href="https://example.com"><img src="https://st2.depositphotos.com/3765753/5349/v/450/depositphotos_53491489-stock-illustration-example-rubber-stamp-vector-over.jpg" alt="">Ссылка-изображение</a></li>
+      <li><img src="https://st2.depositphotos.com/3765753/5349/v/450/depositphotos_53491489-stock-illustration-example-rubber-stamp-vector-over.jpg" usemap="#mapSquare" alt="">Ссылки из прямоугольных и круглых областей картинки</li>
+      <li><a href="zxc.html">Относительная на страницу в текущем каталоге</a></li>
+      <li><a href="./about/zxc.html"> Относительная на страницу в каталоге about</a></li>
+      <li><a href="./">Относительная на страницу в каталоге уровнем выше текущего</a></li>
+      <li><a href="../">Относительная на страницу в каталоге двумя уровнями выше</a></li>
+      <li><a href="/">Сокращенная на главную</a></li>
+      <li><a href="/asd">Сокращенная ссылку на внутреннюю</a></li>
+    </ol>
+    <h2>Форма</h2>
+    <form action="send.php" id="Forma">
+      <label for="Name">Введите ваше имя:</label>
+			<input id="Name" type="text" name="name">
+			<br>
+			<label for="mail">Введите ваш e-mail:</label>
+			<input id="mail" type="email" name="email">
+			<br>
+			<label for="Data">Введите вашу дату рождения:</label>
+			<input id="Data" type="date" name="date">
+			<br>
+			<label>Пол</label>
+			<input id="Pol1" type="radio" name="sex" value="Мужской">
+			<label for="Pol1">Мужской</label>
+			<input id="Pol2" type="radio" name="sex" value="Женский">
+			<label for="Pol2">Женский</label>
+			<br>
+			<label>Количество конечностей</label>
+      <input id="Konech0" type="radio" name="limb" value="0">
+			<label for="Konech0">0</label>
+			<input id="Konech1" type="radio" name="limb" value="1">
+			<label for="Konech1">1</label>
+			<input id="Konech2" type="radio" name="limb" value="2">
+			<label for="Konech2">2</label>
+      <input id="Konech3" type="radio" name="limb" value="3">
+			<label for="Konech3">3</label>
+      <input id="Konech4" type="radio" name="limb" value="4">
+			<label for="Konech4">4</label>
+      <input id="Konech5" type="radio" name="limb" value="5">
+			<label for="Konech5">5</label>
+			<br>
+			<label>Сверхспособность</label>
+			<select name="select">
+				<option value="s1">бессмертие</option>
+				<option value="s2">прохождение сквозь стены</option>
+				<option value="s3">левитация</option>
+			</select>
+			<br>
+			<label for="Biorga">Биография:</label>
+			<textarea id="Biorga" cols="70" rows="6"></textarea>
+			<br>
+			<label for="Oznakomlenie">Ознакомился с контрактом</label>
+			<input id="Oznakomlenie" type="checkbox" name="contract">
+			<br>
+			<input type="submit" value="Отправить">
+		</form>
+		<footer id="myFooter"></footer>
+    
