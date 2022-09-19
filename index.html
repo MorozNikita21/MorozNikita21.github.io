@@ -1,15 +1,38 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
   <head>
-    <title>Гиперссылки и форма</title>
+    <link href="./style.css" rel="stylesheet">
+    <title>Страница Морозца</title>
   </head>
   <body>
+  <header class="Zag">
+    <div class="con">
+      <div class="hw">
+        <div id="blochki">
+          <div id="inside">
+	    <img src="logo.jpg" width="125" height="125" alt="">
+	    <h1>Мороз Никита (это я на логотипе)</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <nav class="navig">
     <ul>
-      <li><a href="#Ssilki" title="Нумерованные ссылки">Нумерованные ссылки</a></li>
-      <li><a href="#Forma" title="Форма">Форма</a></li>
+    <li>
+      <a href="#Osnova" title="Основная часть">Ссылки</a>
+    </li>
+    <li>
+      <a href="#Forma" title="Форма">Форма</a>
+    </li>
     </ul>
+    </nav>
+    <map name="Plos"> 
+      <area shape="rect" coords="0,0,82,126" href="http://example.com/" alt="">
+      <area shape="circle" coords="950,300,500" href="https://developer.mozilla.org/ru/docs/Web/HTML/Element/map" alt="">
+    </map>
     <h2>Гиперссылки</h2>
-    <ol id="Ssilki">
+    <ol class="Ssilki">	
       <li><a href="example.com">Aбсолютная гиперссылка</a></li>
       <li><a href="https://example.com">Aбсолютная в протоколе</a></li>
       <li><a href="ftp://example.com/file.txt">Cсылка на файл на сервере FTP без авторизации</a></li>
@@ -24,7 +47,7 @@
       <!--noindex--><li><a href="https://example.com">Ссылка, запрещенная для индексации поисковиками</a></li><!--/noindex-->
       <li><p>Я даже не знаю, что сюда написать<a href="https://example.com">Ссылка контекстная в тексте абзаца</a>И сюда тоже не знаю что писать</p></li>
       <li><a href="https://example.com"><img src="https://st2.depositphotos.com/3765753/5349/v/450/depositphotos_53491489-stock-illustration-example-rubber-stamp-vector-over.jpg" alt="">Ссылка-изображение</a></li>
-      <li><img src="https://st2.depositphotos.com/3765753/5349/v/450/depositphotos_53491489-stock-illustration-example-rubber-stamp-vector-over.jpg" usemap="#mapSquare" alt="">Ссылки из прямоугольных и круглых областей картинки</li>
+      <li><img src="https://st2.depositphotos.com/3765753/5349/v/450/depositphotos_53491489-stock-illustration-example-rubber-stamp-vector-over.jpg" usemap="#Plos" alt="">Ссылки из прямоугольных и круглых областей картинки</li>
       <li><a href="zxc.html">Относительная на страницу в текущем каталоге</a></li>
       <li><a href="./about/zxc.html"> Относительная на страницу в каталоге about</a></li>
       <li><a href="./">Относительная на страницу в каталоге уровнем выше текущего</a></li>
@@ -32,6 +55,53 @@
       <li><a href="/">Сокращенная на главную</a></li>
       <li><a href="/asd">Сокращенная ссылку на внутреннюю</a></li>
     </ol>
+   <h2>Таблица</h2>
+   <table>
+     <tr>
+       <td>Nikita</td>
+       <td>Sasha</td>
+       <td>Kostya</td>
+       <td>Nikita</td>
+       <td>Sasha</td>
+     </tr>
+     <tr>
+       <td colspan="3">Nikita</td>
+		    <th rowspan="5">Sasha</th>
+		    <td>Kostya</td>
+		  </tr>
+		  <tr>
+		    <td>Nikita</td>
+		    <td>Sasha</td>
+		  	<td>Sasha</td>
+		    <td>Kostya</td>
+		  </tr>
+		  <tr>
+		  	<td>Nikita</td>
+		    <td>Sasha</td>
+		    <td>Sasha</td>
+		    <td>Kostya</td>
+		  </tr>
+		  <tr>
+		  	<td>Poshalka</td>
+		  	<td>Nastya</td>
+		  	<td>Stasya</td>
+		    <td>Kostya</td>
+		  </tr>
+		  <tr>
+		  	<td>Sasha</td>
+		  	<td>Sasha</td>
+		  	<td>Sasha</td>
+		    <td>Kostya</td>
+		  </tr>
+		  <tr>
+		  	<td>Sasha</td>
+		  	<td>Sasha</td>
+		  	<td>Sasha</td>
+		  	<td>Sasha</td>
+		    <td>Sasha</td>
+		  </tr>
+
+		</table>
     <h2>Форма</h2>
     <form action="send.php" id="Forma">
       <label for="Name">Введите ваше имя:</label>
@@ -78,5 +148,6 @@
 			<br>
 			<input type="submit" value="Отправить">
 		</form>
-		<footer id="myFooter"></footer>
-    
+		<footer class="Fot">(с) Мороз Никита 2022</footer>
+   </body>
+</html>
