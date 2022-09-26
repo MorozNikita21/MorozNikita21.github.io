@@ -1,18 +1,27 @@
 .con {
-	max-width: 960px;
     margin-left: auto;
     margin-right: auto;
 }
 
 .hw {
-	display: flow-root;
+	display: flex;
 }
-
+body{
+        margin: 0;
+    padding: 0;
+}
 header {
 	background: #008B8B;
-	display: flow-root;
+	display: flex;
+	border-collapse: collapse;
+        margin: 0;
+        padding: 0;
 }
-
+.example
+{
+  width: 100%;
+  height: auto
+}
 .hw img {
 	float: left;
 }
@@ -36,15 +45,14 @@ header {
 }
 
 nav ul {
-	display: flow-root;
-	margin: 0;
-	padding: 0;
-	list-style-type: none;
+	display: inline-block;
+   	text-align: center;
 }
 
 nav ul li {
-	float: left;
-	margin-right: 30px;
+	display: inline-block;
+     	float: none;
+     	margin: 0 auto;
 }
 .navig ul 
 {
@@ -56,11 +64,11 @@ nav ul li {
 .navig li
  {
     float: none;
-    display:inline;
+    display:flex;
     margin: 0 1.15em;
  }
  .navigli a {
-    display:inline-block;
+    display:flex;W
  }
  .navig
  {
@@ -74,9 +82,6 @@ nav ul li {
  	margin: 0 auto;
  	text-align: center;
  	max-width: 920px;
- }
- .Ssilki li a {
-    display:inline-block;
  }
  .Ssilki ol 
 {
@@ -94,11 +99,20 @@ nav ul li {
   	list-style-position: inside;
     margin: 0 1.15em;
  }
+.ow
+ {
+            display: flex;
+          flex-direction: column;
+ }
  table, th, td {
-  border: 1px solid black;
+  	order:2;
+  	border: 1px solid black;
    	margin: 0 auto;
-    text-align: center;
-     border-collapse: collapse;
+    	text-align: center;
+     	border-collapse: collapse;
+}
+form{
+	order:1;
 }
 tr:nth-child(2n)
 {
@@ -113,5 +127,29 @@ tr:nth-child(2n+1)
 	background: #008080;
 	margin: 0 auto;
 	text-align: center;
+	padding: 0;
 }
-
+@media (min-width: 600px){
+  header{
+    border: .1px solid #900;
+    border-bottom: none;
+    width:100%;
+    height:100%;
+    }
+  nav ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+  nav ul li {
+    float: left;
+    margin-right: 30px;
+  }
+  table, th, td {
+    order:2;
+  }
+  form{
+    order:3;
+  }
+}
